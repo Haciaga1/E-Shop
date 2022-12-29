@@ -3,13 +3,13 @@ import { Link, useParams } from 'react-router-dom';
 import '../App.css'
 import Skeleton from 'react-loading-skeleton';
 
+
 const Product = () => {
 
     const {id}= useParams();
     const [product, setProduct]=useState([]);
     const [loading, setLoading]=useState(false);
 
-    const [cart, setCart]=useState([]);
 
 
     useEffect(() => {
@@ -21,6 +21,7 @@ const Product = () => {
         }
         getProduct();
     }, []);
+
     
     // Sehifeye api den melumatlar yuklendikde component'in skleti gorunur
     const Loading = ()=>{
@@ -60,11 +61,7 @@ const Product = () => {
                     <h3 className="display-5 fw-bodl my-4">${product.price}</h3>
                     <p className="lead">{product.description}</p>
                     <button className='btn btn-outline-dark px-4 py-2' 
-                        onClick={()=>{
-                            
-                            
-                        }}
-                    
+                        onClick={()=>{}}
                     >Add to Cart</button>
                     <Link to='/cart' className='btn btn-dark ms-2 px-3 py-2'>Go to Cart</Link>
                 </div>

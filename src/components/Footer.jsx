@@ -64,8 +64,8 @@ const Footer = () => {
                                     </Link>
                                 </p>
                                 <p>
-                                    <Link to='/about' className='text-reset'>
-                                        About
+                                    <Link to='/signup' className='text-reset'>
+                                        Sign up
                                     </Link>
                                 </p>
                             </MDBCol>
